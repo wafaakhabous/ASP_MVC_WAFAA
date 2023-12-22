@@ -1,0 +1,18 @@
+﻿@model IEnumerable<string>
+
+@inject Microsoft.Extensions.Caching.Memory.IMemoryCache MemoryCache
+
+<h1>Cache Contents</h1>
+
+@foreach (var key in Model)
+{
+    object cacheValue;
+    if (MemoryCache.TryGetValue(key, out cacheValue))
+    {
+        <p>Key: @key, Value: @cacheValue</p>
+    }
+    else
+    {
+        <p>Key: @key, Value: Not found</p>
+    }
+}

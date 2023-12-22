@@ -1,0 +1,126 @@
+2023-12-21 23:57:48.648 +01:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Pottery'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2023-12-21 23:57:52.717 +01:00 [INF] Executed DbCommand (51ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Pottery] AS [p]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2023-12-21 23:57:53.094 +01:00 [INF] User profile is available. Using 'C:\Users\DELL\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2023-12-21 23:57:53.406 +01:00 [INF] Now listening on: https://localhost:7030
+2023-12-21 23:57:53.409 +01:00 [INF] Now listening on: http://localhost:5262
+2023-12-21 23:57:53.415 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-21 23:57:53.417 +01:00 [INF] Hosting environment: Development
+2023-12-21 23:57:53.419 +01:00 [INF] Content root path: C:\Users\DELL\Desktop\DESKTOP\WORK\ILISI3\C#_asp.NET\E-COMMERCE-ASP.net-MVC-master\ASP_MVC_WAFAA
+2023-12-21 23:57:56.105 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7030/ - -
+2023-12-21 23:57:56.347 +01:00 [INF] Executing endpoint 'ASP_MVC_WAFAA.Controllers.HomeController.Index (ASP_MVC_WAFAA)'
+2023-12-21 23:57:56.402 +01:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller ASP_MVC_WAFAA.Controllers.HomeController (ASP_MVC_WAFAA).
+2023-12-21 23:57:56.449 +01:00 [INF] Executing ViewResult, running view Index.
+2023-12-21 23:57:56.877 +01:00 [INF] Executed ViewResult - view Index executed in 437.1978ms.
+2023-12-21 23:57:56.890 +01:00 [INF] Executed action ASP_MVC_WAFAA.Controllers.HomeController.Index (ASP_MVC_WAFAA) in 478.461ms
+2023-12-21 23:57:56.893 +01:00 [INF] Executed endpoint 'ASP_MVC_WAFAA.Controllers.HomeController.Index (ASP_MVC_WAFAA)'
+2023-12-21 23:57:56.964 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7030/ - - - 200 - text/html;+charset=utf-8 846.5677ms
+2023-12-21 23:57:57.072 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7030/_framework/aspnetcore-browser-refresh.js - -
+2023-12-21 23:57:57.074 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7030/ASP_MVC_WAFAA.styles.css?v=r3EGOWt5t-oaT0-OEVCsgfL__brPyB824x1wT0xmgj0 - -
+2023-12-21 23:57:57.074 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7030/_vs/browserLink - -
+2023-12-21 23:57:57.119 +01:00 [INF] The file /ASP_MVC_WAFAA.styles.css was not modified
+2023-12-21 23:57:57.135 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7030/_framework/aspnetcore-browser-refresh.js - - - 200 12358 application/javascript;+charset=utf-8 63.2388ms
+2023-12-21 23:57:57.137 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7030/ASP_MVC_WAFAA.styles.css?v=r3EGOWt5t-oaT0-OEVCsgfL__brPyB824x1wT0xmgj0 - - - 304 - text/css 63.2300ms
+2023-12-21 23:57:57.239 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7030/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 164.4998ms
+2023-12-21 23:58:00.913 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7030/potteries - -
+2023-12-21 23:58:00.961 +01:00 [INF] Executing endpoint 'ASP_MVC_WAFAA.Controllers.PotteriesController.Index (ASP_MVC_WAFAA)'
+2023-12-21 23:58:01.028 +01:00 [INF] Route matched with {action = "Index", controller = "Potteries"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String) on controller ASP_MVC_WAFAA.Controllers.PotteriesController (ASP_MVC_WAFAA).
+2023-12-21 23:58:01.258 +01:00 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[ImageUrl], [p].[Price], [p].[ReleaseDate], [p].[Title]
+FROM [Pottery] AS [p]
+2023-12-21 23:58:01.354 +01:00 [INF] *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*Potteries list loaded from the database and cached.
+2023-12-21 23:58:01.363 +01:00 [INF] Executing ViewResult, running view Index.
+2023-12-21 23:58:01.487 +01:00 [INF] Executed ViewResult - view Index executed in 127.3247ms.
+2023-12-21 23:58:01.494 +01:00 [INF] Executed action ASP_MVC_WAFAA.Controllers.PotteriesController.Index (ASP_MVC_WAFAA) in 453.5861ms
+2023-12-21 23:58:01.498 +01:00 [INF] Executed endpoint 'ASP_MVC_WAFAA.Controllers.PotteriesController.Index (ASP_MVC_WAFAA)'
+2023-12-21 23:58:01.532 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7030/potteries - - - 200 - text/html;+charset=utf-8 619.5439ms
+2023-12-21 23:58:01.579 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7030/images/28a3cf48-31a9-43c7-8170-1216a7f5377a_9317ef7a54d5c367105c9e2788627507.jpg - -
+2023-12-21 23:58:01.581 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7030/_vs/browserLink - -
+2023-12-21 23:58:01.586 +01:00 [INF] The file /images/28a3cf48-31a9-43c7-8170-1216a7f5377a_9317ef7a54d5c367105c9e2788627507.jpg was not modified
+2023-12-21 23:58:01.581 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7030/_framework/aspnetcore-browser-refresh.js - -
+2023-12-21 23:58:01.592 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7030/images/28a3cf48-31a9-43c7-8170-1216a7f5377a_9317ef7a54d5c367105c9e2788627507.jpg - - - 304 - image/jpeg 13.4549ms
+2023-12-21 23:58:01.765 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7030/_framework/aspnetcore-browser-refresh.js - - - 200 12358 application/javascript;+charset=utf-8 184.1557ms
+2023-12-21 23:58:01.815 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7030/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 233.5607ms
+2023-12-21 23:58:05.312 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7030/Potteries/Create - -
+2023-12-21 23:58:05.347 +01:00 [INF] Executing endpoint 'ASP_MVC_WAFAA.Controllers.PotteriesController.Create (ASP_MVC_WAFAA)'
+2023-12-21 23:58:05.360 +01:00 [INF] Route matched with {action = "Create", controller = "Potteries"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller ASP_MVC_WAFAA.Controllers.PotteriesController (ASP_MVC_WAFAA).
+2023-12-21 23:58:05.388 +01:00 [INF] Executing ViewResult, running view Create.
+2023-12-21 23:58:05.471 +01:00 [INF] Executed ViewResult - view Create executed in 84.3817ms.
+2023-12-21 23:58:05.481 +01:00 [INF] Executed action ASP_MVC_WAFAA.Controllers.PotteriesController.Create (ASP_MVC_WAFAA) in 98.968ms
+2023-12-21 23:58:05.484 +01:00 [INF] Executed endpoint 'ASP_MVC_WAFAA.Controllers.PotteriesController.Create (ASP_MVC_WAFAA)'
+2023-12-21 23:58:05.494 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7030/Potteries/Create - - - 200 - text/html;+charset=utf-8 181.7404ms
+2023-12-21 23:58:05.587 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7030/_vs/browserLink - -
+2023-12-21 23:58:05.589 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7030/_framework/aspnetcore-browser-refresh.js - -
+2023-12-21 23:58:05.613 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7030/_framework/aspnetcore-browser-refresh.js - - - 200 12358 application/javascript;+charset=utf-8 29.9094ms
+2023-12-21 23:58:05.669 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7030/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 81.9941ms
+2023-12-21 23:58:22.689 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7030/Potteries/Create multipart/form-data;+boundary=----WebKitFormBoundaryY4ORvSK5BBLiOovB 51966
+2023-12-21 23:58:22.715 +01:00 [INF] Executing endpoint 'ASP_MVC_WAFAA.Controllers.PotteriesController.Create (ASP_MVC_WAFAA)'
+2023-12-21 23:58:22.746 +01:00 [INF] Route matched with {action = "Create", controller = "Potteries"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ASP_MVC_WAFAA.Models.Pottery, Microsoft.AspNetCore.Http.IFormFile) on controller ASP_MVC_WAFAA.Controllers.PotteriesController (ASP_MVC_WAFAA).
+2023-12-21 23:58:23.378 +01:00 [INF] Executed DbCommand (177ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Pottery] ([ImageUrl], [Price], [ReleaseDate], [Title])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2023-12-21 23:58:23.451 +01:00 [INF] *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-**-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-Pottery created successfully: 7*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-**-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-**-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+2023-12-21 23:58:23.470 +01:00 [INF] Executing RedirectResult, redirecting to /Potteries.
+2023-12-21 23:58:23.486 +01:00 [INF] Executed action ASP_MVC_WAFAA.Controllers.PotteriesController.Create (ASP_MVC_WAFAA) in 733.4777ms
+2023-12-21 23:58:23.494 +01:00 [INF] Executed endpoint 'ASP_MVC_WAFAA.Controllers.PotteriesController.Create (ASP_MVC_WAFAA)'
+2023-12-21 23:58:23.501 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7030/Potteries/Create multipart/form-data;+boundary=----WebKitFormBoundaryY4ORvSK5BBLiOovB 51966 - 302 0 - 811.6725ms
+2023-12-21 23:58:23.516 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7030/Potteries - -
+2023-12-21 23:58:23.537 +01:00 [INF] Executing endpoint 'ASP_MVC_WAFAA.Controllers.PotteriesController.Index (ASP_MVC_WAFAA)'
+2023-12-21 23:58:23.542 +01:00 [INF] Route matched with {action = "Index", controller = "Potteries"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String) on controller ASP_MVC_WAFAA.Controllers.PotteriesController (ASP_MVC_WAFAA).
+2023-12-21 23:58:23.555 +01:00 [INF] *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*Potteries list loaded from cache.
+2023-12-21 23:58:23.569 +01:00 [INF] Executing ViewResult, running view Index.
+2023-12-21 23:58:23.632 +01:00 [INF] Executed ViewResult - view Index executed in 62.1091ms.
+2023-12-21 23:58:23.635 +01:00 [INF] Executed action ASP_MVC_WAFAA.Controllers.PotteriesController.Index (ASP_MVC_WAFAA) in 81.2684ms
+2023-12-21 23:58:23.641 +01:00 [INF] Executed endpoint 'ASP_MVC_WAFAA.Controllers.PotteriesController.Index (ASP_MVC_WAFAA)'
+2023-12-21 23:58:23.778 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7030/Potteries - - - 200 - text/html;+charset=utf-8 261.8699ms
+2023-12-21 23:58:23.904 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7030/_vs/browserLink - -
+2023-12-21 23:58:23.904 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7030/_framework/aspnetcore-browser-refresh.js - -
+2023-12-21 23:58:23.935 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7030/_framework/aspnetcore-browser-refresh.js - - - 200 12358 application/javascript;+charset=utf-8 30.9281ms
+2023-12-21 23:58:24.036 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7030/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 132.5298ms
+2023-12-21 23:58:31.041 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7030/Potteries/Create - -
+2023-12-21 23:58:31.054 +01:00 [INF] Executing endpoint 'ASP_MVC_WAFAA.Controllers.PotteriesController.Create (ASP_MVC_WAFAA)'
+2023-12-21 23:58:31.063 +01:00 [INF] Route matched with {action = "Create", controller = "Potteries"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Create() on controller ASP_MVC_WAFAA.Controllers.PotteriesController (ASP_MVC_WAFAA).
+2023-12-21 23:58:31.102 +01:00 [INF] Executing ViewResult, running view Create.
+2023-12-21 23:58:31.141 +01:00 [INF] Executed ViewResult - view Create executed in 39.02ms.
+2023-12-21 23:58:31.151 +01:00 [INF] Executed action ASP_MVC_WAFAA.Controllers.PotteriesController.Create (ASP_MVC_WAFAA) in 52.4246ms
+2023-12-21 23:58:31.155 +01:00 [INF] Executed endpoint 'ASP_MVC_WAFAA.Controllers.PotteriesController.Create (ASP_MVC_WAFAA)'
+2023-12-21 23:58:31.161 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7030/Potteries/Create - - - 200 - text/html;+charset=utf-8 119.6940ms
+2023-12-21 23:58:31.263 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7030/_framework/aspnetcore-browser-refresh.js - -
+2023-12-21 23:58:31.263 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7030/_vs/browserLink - -
+2023-12-21 23:58:31.275 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7030/_framework/aspnetcore-browser-refresh.js - - - 200 12358 application/javascript;+charset=utf-8 9.8237ms
+2023-12-21 23:58:31.324 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7030/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 60.1031ms
+2023-12-21 23:58:47.283 +01:00 [INF] Request starting HTTP/2 POST https://localhost:7030/Potteries/Create multipart/form-data;+boundary=----WebKitFormBoundarybvkgLkMnHe9RKGLW 49753
+2023-12-21 23:58:47.295 +01:00 [INF] Executing endpoint 'ASP_MVC_WAFAA.Controllers.PotteriesController.Create (ASP_MVC_WAFAA)'
+2023-12-21 23:58:47.300 +01:00 [INF] Route matched with {action = "Create", controller = "Potteries"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Create(ASP_MVC_WAFAA.Models.Pottery, Microsoft.AspNetCore.Http.IFormFile) on controller ASP_MVC_WAFAA.Controllers.PotteriesController (ASP_MVC_WAFAA).
+2023-12-21 23:58:47.378 +01:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (Precision = 18) (Scale = 2) (DbType = Decimal), @p2='?' (DbType = DateTime2), @p3='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Pottery] ([ImageUrl], [Price], [ReleaseDate], [Title])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3);
+2023-12-21 23:58:47.424 +01:00 [INF] *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-**-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-Pottery created successfully: 8*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-**-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-**-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+2023-12-21 23:58:47.432 +01:00 [INF] Executing RedirectResult, redirecting to /Potteries.
+2023-12-21 23:58:47.439 +01:00 [INF] Executed action ASP_MVC_WAFAA.Controllers.PotteriesController.Create (ASP_MVC_WAFAA) in 107.0295ms
+2023-12-21 23:58:47.447 +01:00 [INF] Executed endpoint 'ASP_MVC_WAFAA.Controllers.PotteriesController.Create (ASP_MVC_WAFAA)'
+2023-12-21 23:58:47.457 +01:00 [INF] Request finished HTTP/2 POST https://localhost:7030/Potteries/Create multipart/form-data;+boundary=----WebKitFormBoundarybvkgLkMnHe9RKGLW 49753 - 302 0 - 173.3090ms
+2023-12-21 23:58:47.474 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7030/Potteries - -
+2023-12-21 23:58:47.481 +01:00 [INF] Executing endpoint 'ASP_MVC_WAFAA.Controllers.PotteriesController.Index (ASP_MVC_WAFAA)'
+2023-12-21 23:58:47.483 +01:00 [INF] Route matched with {action = "Index", controller = "Potteries"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index(System.String) on controller ASP_MVC_WAFAA.Controllers.PotteriesController (ASP_MVC_WAFAA).
+2023-12-21 23:58:47.783 +01:00 [INF] *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*Potteries list loaded from cache.
+2023-12-21 23:58:47.799 +01:00 [INF] Executing ViewResult, running view Index.
+2023-12-21 23:58:47.853 +01:00 [INF] Executed ViewResult - view Index executed in 54.1329ms.
+2023-12-21 23:58:48.277 +01:00 [INF] Executed action ASP_MVC_WAFAA.Controllers.PotteriesController.Index (ASP_MVC_WAFAA) in 495.3557ms
+2023-12-21 23:58:48.281 +01:00 [INF] Executed endpoint 'ASP_MVC_WAFAA.Controllers.PotteriesController.Index (ASP_MVC_WAFAA)'
+2023-12-21 23:58:48.325 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7030/Potteries - - - 200 - text/html;+charset=utf-8 850.7495ms
+2023-12-21 23:58:48.447 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7030/_framework/aspnetcore-browser-refresh.js - -
+2023-12-21 23:58:48.447 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7030/_vs/browserLink - -
+2023-12-21 23:58:48.474 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7030/_framework/aspnetcore-browser-refresh.js - - - 200 12358 application/javascript;+charset=utf-8 27.4071ms
+2023-12-21 23:58:48.596 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7030/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 148.2634ms
